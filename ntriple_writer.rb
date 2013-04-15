@@ -21,7 +21,8 @@ table.each do |line|
   subject = if line["Zeile"]
     "_#{line["Zeile"]}"
   else
-    "#{line["Keyword Deutsch"]}".parameterize
+    UUID.new.generate
+    # "#{line["Keyword Deutsch"]}".parameterize
   end
 
   pref_label_de = line["Keyword Deutsch"]
